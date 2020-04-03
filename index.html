@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <title>Anti Corona Virus</title>
+  </head>
+  <body>
+    <!-- The canvas for the panning background -->
+    <canvas id="background" width="600" height="360">
+      Your browser does not support canvas. Please try again with a different
+      browser.
+    </canvas>
+    <!-- The canvas for all enemy ships and bullets -->
+    <canvas id="main" width="600" height="360"></canvas>
+    <!-- The canvas the ship uses (can only move up
+         one forth the screen.) -->
+    <canvas id="ship" width="600" height="360"></canvas>
+
+    <div class="view" id="view">
+      <div class="menu-option" id="menu-option">
+        <div>
+          <input
+            type="text"
+            class="ip-username"
+            id="ip-username"
+            placeholder="Enter your name..."
+          />
+        </div>
+        <div class="mt-40">
+          <button id="btn-startGame" disabled>
+            Start Game
+          </button>
+        </div>
+        <div class="mt-60">
+          <button id="btn-view-high-score">View high score</button>
+        </div>
+        <div class="mt-20">
+          <button id="btn-view-instruction">Instruction</button>
+        </div>
+      </div>
+
+      <div class="high-score" id="high-score">
+        <ul id="list-user"></ul>
+        <div class="mt-20">
+          <button id="btn-back">Back</button>
+        </div>
+      </div>
+
+      <div class="instruction" id="instruction">
+        <h2>DiDiCorona</h2>
+        <h3>Instructions</h3>
+        <div>
+          <p>
+            Press Arrow <code>UP</code>, <code>LEFT</code>, <code>DOWN</code>,
+            <code>RIGHT</code> to move the doctor
+          </p>
+          <p>Press <code>TAB</code> to change doctor's weapons</p>
+          <p>Press <code>P</code> to pause/resume game</p>
+          <p>Press <code>ESC</code> to exit game</p>
+        </div>
+        <div>
+          <div class="mt-20">
+            <button id="btn-back-from-instruction">Back</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="score" id="score">
+        SCORE: <span id="score-counter">0</span>
+      </div>
+      <div class="pause-game" id="pause-game">
+        <button id="btn-pause">
+          Pause
+        </button>
+      </div>
+      <div class="list-weapon" id="list-weapon">
+        <div class="weapon weapon-active" id="leukocyte">
+          <img src="./imgs/leukocyte.png" />
+        </div>
+        <div class="weapon" id="antibiotic">
+          <img src="./imgs/antibiotic.png" />
+        </div>
+        <div class="weapon" id="vaccine">
+          <img src="./imgs/vaccine.png" />
+        </div>
+        <div class="weapon" id="vitaminC">
+          <img src="./imgs/lime.png" />
+        </div>
+      </div>
+
+      <div class="game-over" id="game-over">
+        GAME OVER
+        <p><button id="btn-restart">Restart</button></p>
+        <p>
+          <i>Press <code>ESC</code> to exit game</i>
+        </p>
+      </div>
+
+      <div class="confirm-exit" id="confirm-exit">
+        Do you want to exit game?
+        <p><button id="btn-ok-exit">OK</button></p>
+        <p><button id="btn-cancel-exit">Cancel</button></p>
+      </div>
+
+      <div class="loading" id="loading">
+        <p>LOADING...</p>
+      </div>
+    </div>
+  <script src="bundle.js"></script></body>
+</html>
